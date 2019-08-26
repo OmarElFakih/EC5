@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3495df6aaf6043bd1d66235778749, type: 3}
   m_Name: Demigod
   m_EditorClassIdentifier: 
+  health: 300
   speed: 3.2
   weight: 0.6
   points: 70
+  stopRadius: 2
   destroyDelay: 0.5
+  effectVolume: 0.45
+  deathScreamClip: {fileID: 8300000, guid: e4eec2014d2f4d241a2c7a08857064bb, type: 3}
+  hurtClip: {fileID: 8300000, guid: d366ee238aff8f4458522c78d350e8a7, type: 3}

@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3495df6aaf6043bd1d66235778749, type: 3}
   m_Name: Warrior
   m_EditorClassIdentifier: 
+  health: 200
   speed: 2.6
   weight: 0.8
-  points: 30
+  points: 0
+  stopRadius: 2
   destroyDelay: 0.5
+  effectVolume: 0.45
+  deathScreamClip: {fileID: 8300000, guid: 1aad2a415f2b69948bfd394a14997b59, type: 3}
+  hurtClip: {fileID: 8300000, guid: d366ee238aff8f4458522c78d350e8a7, type: 3}

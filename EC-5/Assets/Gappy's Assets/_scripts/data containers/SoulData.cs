@@ -9,7 +9,7 @@ public class SoulData : ScriptableObject
     public float health;
     public float speed;
     public float weight;
-    public float points;
+    public int points;
     public float stopRadius = 2f;
     public float destroyDelay;
     public float effectVolume;

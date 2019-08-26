@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public abstract class Soul : MonoBehaviour
@@ -47,6 +48,8 @@ public abstract class Soul : MonoBehaviour
         //play animation
         //play sound effect
         canMove = false;
+        GetComponent<Collider2D>().enabled = false;
+        FindObjectOfType<ScoreManager>().Add(data.points);//invoke the add method on the score manager
         audioS.PlayOneShot(data.deathScreamClip);
         Destroy(gameObject,data.destroyDelay);
     }
