@@ -19,7 +19,7 @@ public class VitalPart : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (gameObject.CompareTag("Spirit"))
+        if (gameObject.CompareTag("Player"))
         {
             if (other.CompareTag("Enemy")) hb.TakeDamage(other.GetComponent<Soul>().data.damage);
         }

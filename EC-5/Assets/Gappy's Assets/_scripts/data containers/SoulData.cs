@@ -8,7 +8,7 @@ public class SoulData : ScriptableObject
     //Attributes
     public float health;
     public float speed;
-    public float weight;
+    public float damage;
     public int points;
     public float stopRadius = 2f;
     public float destroyDelay;
