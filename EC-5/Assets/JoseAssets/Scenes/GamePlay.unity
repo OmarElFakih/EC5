@@ -665,7 +665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391769238}
   m_LocalRotation: {x: -0, y: -0, z: 0.99999726, w: -0.002338739}
-  m_LocalPosition: {x: -1, y: 0.9, z: -2}
+  m_LocalPosition: {x: -0.96, y: -5.75, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1187244866}
@@ -2149,8 +2149,8 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_PointLightInnerAngle: 266.47
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 6.34
-  m_PointLightOuterRadius: 23.500195
+  m_PointLightInnerRadius: 4.23619
+  m_PointLightOuterRadius: 13.301172
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -2170,8 +2170,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754812655}
-  m_LocalRotation: {x: 0, y: 0, z: -0.737407, w: 0.67544866}
-  m_LocalPosition: {x: -7.1, y: 20.76, z: -2}
+  m_LocalRotation: {x: 0, y: 0, z: -0.8190493, w: 0.5737232}
+  m_LocalPosition: {x: -9.04, y: 10.51, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4663,7 +4663,7 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_PointLightInnerAngle: 39.53
   m_PointLightOuterAngle: 236.97
-  m_PointLightInnerRadius: 0.35
+  m_PointLightInnerRadius: 3.5890484
   m_PointLightOuterRadius: 35.27024
   m_PointLightDistance: 3
   m_PointLightQuality: 1
@@ -4685,7 +4685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065821188}
   m_LocalRotation: {x: 0, y: 0, z: 0.3959932, w: 0.9182534}
-  m_LocalPosition: {x: 42.8, y: -0.1, z: -2}
+  m_LocalPosition: {x: 31.73, y: -0.09, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
