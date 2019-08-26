@@ -4935,5 +4935,15 @@ PrefabInstance:
       propertyPath: ShapeModule.angle
       value: 16.6
       objectReference: {fileID: 0}
+    - target: {fileID: 3434445242999206636, guid: 5825ccf180b79ab4fa56bfa6bec44aea,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1946124761
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434445242999206636, guid: 5825ccf180b79ab4fa56bfa6bec44aea,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5825ccf180b79ab4fa56bfa6bec44aea, type: 3}
