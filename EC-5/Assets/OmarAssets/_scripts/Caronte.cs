@@ -5,8 +5,6 @@ using UnityEngine;
 public class Caronte : MonoBehaviour
 {
 
-    public float attackRate;
-
     [SerializeField]
     private ParticleSystem _slashParticle = null;
 
@@ -25,7 +23,6 @@ public class Caronte : MonoBehaviour
 
     private float _dragDistance = 0f;
 
-    private float _nextAttack = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +48,7 @@ public class Caronte : MonoBehaviour
             {
                 _lp = touch.position;
             }
-            else if (touch.phase == TouchPhase.Ended && Time.time > _nextAttack)
+            else if (touch.phase == TouchPhase.Ended)
             {
                 _lp = touch.position;
 
@@ -80,8 +77,6 @@ public class Caronte : MonoBehaviour
                     _animator.SetFloat("Blend", _mBlend);
                     _animator.SetTrigger("Attack");
 
-                    _nextAttack = Time.time + attackRate;
-
                 }
 
 
@@ -94,7 +89,7 @@ public class Caronte : MonoBehaviour
 
 #if UNITY_STANDALONE || UNITY_WEBGL
         //other
-        if (Input.GetMouseButtonDown(0) && Time.time > _nextAttack)
+        if (Input.GetMouseButtonDown(0))
         {
             Vector3 _mousePoint = Input.mousePosition;
             _mousePoint = Camera.main.ScreenToWorldPoint(_mousePoint);
@@ -119,8 +114,6 @@ public class Caronte : MonoBehaviour
 
             _animator.SetFloat("Blend", blend);
             _animator.SetTrigger("Attack");
-
-            _nextAttack = Time.time + attackRate;
         }
 #endif
         //other
