@@ -9,7 +9,10 @@ public class Caronte : MonoBehaviour
     private ParticleSystem _slashParticle = null;
 
     [SerializeField]
-    private Transform _slashTransform = null; 
+    private Transform _slashTransform = null;
+
+    [SerializeField]
+    private AudioClip[] _swingClips = null;
 
     private Animator _animator = null;
 
@@ -124,6 +127,11 @@ public class Caronte : MonoBehaviour
         transform.localScale = _scale;
     }
 
+    public void PlaySwing()
+    {
+        int index = Random.Range(0, _swingClips.Length);
+        AudioSource.PlayClipAtPoint(_swingClips[index], Camera.main.transform.position);
+    }
 
 
     public void Slash()

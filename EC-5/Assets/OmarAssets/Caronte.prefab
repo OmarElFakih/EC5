@@ -4999,3 +4999,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slashParticle: {fileID: 6965299424365328064}
   _slashTransform: {fileID: 6965299424365328065}
+  _swingClips:
+  - {fileID: 8300000, guid: c44961932a477ab468929c394be56912, type: 3}
+  - {fileID: 8300000, guid: 951de200f10b054489888a7227a5c894, type: 3}
