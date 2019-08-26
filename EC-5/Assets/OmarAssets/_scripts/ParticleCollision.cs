@@ -16,15 +16,15 @@ public class ParticleCollision : MonoBehaviour
         if (other.CompareTag("Soul"))
         {
             Soul enemy = other.GetComponent<Soul>();
-            enemy.OnDeath();
+            enemy.TakeDamage(100);
         }
         _enters += 1;
-        Debug.Log("Particle Collision " + _enters);
+        //Debug.Log("Particle Collision " + _enters);
     }
 
     private void OnParticleTrigger()
     {
         _enters += 1;
-        Debug.Log("ParticleTrigger " + _enters);
+        //Debug.Log("ParticleTrigger " + _enters);
     }
 }

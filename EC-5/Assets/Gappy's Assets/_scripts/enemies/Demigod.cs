@@ -14,6 +14,8 @@ public class Demigod : Soul
     [Header("shoot data")]
     public GameObject projectile;
 
+    private bool canShoot = true;
+
     protected override void Start()
     {
         base.Start();
@@ -26,6 +28,12 @@ public class Demigod : Soul
         yield return new WaitForSeconds(0.7f);
         rb.velocity = Vector2.zero;
 
+    }
+
+    protected override void OnDeath()
+    {
+        canShoot = false;
+        base.OnDeath();
     }
 
     protected override void MoveTowardsTarget(GameObject target)
@@ -57,11 +65,14 @@ public class Demigod : Soul
 
     void shoot()
     {
-        GameObject obj = Instantiate(projectile, transform.position, Quaternion.identity);
-        Vector2 dir = new Vector2(target.transform.position.x - rb.position.x, target.transform.position.y - rb.position.y);
-        dir.Normalize();
-        obj.GetComponent<Rigidbody2D>().AddForce(dir * 8,ForceMode2D.Impulse);
-        Destroy(obj, 1.5f); //projectile lifetime
+        if (canShoot)
+        {
+            GameObject obj = Instantiate(projectile, transform.position, Quaternion.identity);
+            Vector2 dir = new Vector2(target.transform.position.x - rb.position.x, target.transform.position.y - rb.position.y);
+            dir.Normalize();
+            obj.GetComponent<Rigidbody2D>().AddForce(dir * 8, ForceMode2D.Impulse);
+            Destroy(obj, 1.5f); //projectile lifetime
+        }
     }
   
 }
