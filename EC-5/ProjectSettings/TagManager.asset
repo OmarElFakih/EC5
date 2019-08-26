@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 4267914279
+    locked: 0
+  - name: BoatLevel
+    uniqueID: 670534319
+    locked: 0
+  - name: Sea
+    uniqueID: 2348842535
+    locked: 0
