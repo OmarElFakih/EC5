@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5112819685364884515}
   - component: {fileID: 3617885042557545382}
   - component: {fileID: 8851188470285153025}
-  - component: {fileID: 9003922571614372959}
+  - component: {fileID: 4256628478768589039}
   - component: {fileID: 1727043468831194816}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Commoner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,10 +97,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.39
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.8
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.26065993, y: 0.6641598}
@@ -142,13 +142,13 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.22, y: -0.43}
   serializedVersion: 2
   m_Radius: 4.77
---- !u!114 &9003922571614372959
+--- !u!114 &4256628478768589039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,11 +157,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 365434983429645011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f47facd0bea9c2d49bcb7e0656aad2b8, type: 3}
+  m_Script: {fileID: 11500000, guid: d178fa1425c634241bf69af80c04422b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 1bb31d566bb601144bdf160f30607b8f, type: 2}
+  data: {fileID: 11400000, guid: 4093d7d4ade7316408a11971247b506a, type: 2}
   targetTag: Player
+  delay: 0.5
+  delayS: 0
 --- !u!114 &1727043468831194816
 MonoBehaviour:
   m_ObjectHideFlags: 0
