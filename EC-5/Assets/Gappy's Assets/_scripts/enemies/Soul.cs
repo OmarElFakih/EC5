@@ -14,7 +14,7 @@ public abstract class Soul : MonoBehaviour
     public string targetTag = "Player"; //can be change to a "boat" tag 
 
     //private
-    private AudioSource audio;
+    private AudioSource audioS;
     private bool canMove = true;
     private float proximity;
 
@@ -36,8 +36,8 @@ public abstract class Soul : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag(targetTag);
         currentHealth = data.health;
-        audio = GetComponent<AudioSource>();
-        audio.volume = data.effectVolume;
+        audioS = GetComponent<AudioSource>();
+        audioS.volume = data.effectVolume;
     }
 
     protected abstract void MoveTowardsTarget(GameObject target);
@@ -47,7 +47,7 @@ public abstract class Soul : MonoBehaviour
         //play animation
         //play sound effect
         canMove = false;
-        audio.PlayOneShot(data.deathScreamClip);
+        audioS.PlayOneShot(data.deathScreamClip);
         Destroy(gameObject,data.destroyDelay);
     }
 
@@ -66,7 +66,7 @@ public abstract class Soul : MonoBehaviour
         else
         {
             //play hurt animation
-            audio.PlayOneShot(data.hurtClip);
+            audioS.PlayOneShot(data.hurtClip);
             currentHealth -= amount;
         }
     }
