@@ -113,6 +113,7 @@ public class Caronte : MonoBehaviour
                 _isFacingLeft = false;
             }
 
+           
             Vector3 _slashDirection = _mousePoint - _slashTransform.position;
             float angle = Mathf.Atan2(_slashDirection.y, _slashDirection.x) * Mathf.Rad2Deg;
             _slashTransform.eulerAngles = Vector3.forward * angle;
