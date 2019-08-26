@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6965299424365328064, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
