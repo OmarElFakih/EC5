@@ -15,6 +15,11 @@ public class ScoreManager : MonoBehaviour
     public Text scoreDisplay;
     public GameObject highScoredisplay;
 
+    [Header("bonus score")]
+    public int bonus = 10;
+    public float timeInterval = 5.5f;
+    private float ini;
+
     private int currentScore,highScore;
     private Animator anim;
 
@@ -56,13 +61,28 @@ public class ScoreManager : MonoBehaviour
 
     }
 
+    private void AddBonus()
+    {
+        if (timeInterval <= 0)
+        {
+            currentScore += bonus;
+            updateUI();
+            timeInterval = ini;
+        }
+        else timeInterval -= Time.deltaTime;
+
+    }
+
     private void Start()
     {
 
         currentScore = 0;
         highScore = InitializeHighscore();
+        ini = timeInterval;
         anim = scoreDisplay.gameObject.GetComponent<Animator>();
         updateUI();
 
     }
+
+    private void FixedUpdate() => AddBonus();
 }
