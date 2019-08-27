@@ -27,7 +27,6 @@ public class ScoreManager : MonoBehaviour
     {
         currentScore += amount;
         anim.SetTrigger("add");
-        checkHighScore();
         updateUI();
 
     }
@@ -66,6 +65,7 @@ public class ScoreManager : MonoBehaviour
         if (timeInterval <= 0)
         {
             currentScore += bonus;
+            anim.SetTrigger("add");
             updateUI();
             timeInterval = ini;
         }
@@ -84,5 +84,10 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    private void FixedUpdate() => AddBonus();
+    private void FixedUpdate()
+    {
+        AddBonus();
+        checkHighScore();
+
+    }
 }
