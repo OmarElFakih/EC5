@@ -26,8 +26,11 @@ public class Spawner : MonoBehaviour
    
     public void spawnSomething()
     {
-        random_px = Random.Range(-17, 17);
-        SpawnerPosition = new Vector3(random_px, transform.position.y, transform.position.z);
-        Instantiate(Enemy, SpawnerPosition, Quaternion.identity);
+        if (!HealthBar.gameIsOver)
+        {
+            random_px = Random.Range(-17, 17);
+            SpawnerPosition = new Vector3(random_px, transform.position.y, transform.position.z);
+            Instantiate(Enemy, SpawnerPosition, Quaternion.identity);
+        }
     }
 }

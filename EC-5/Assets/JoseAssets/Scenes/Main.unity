@@ -534,6 +534,7 @@ MonoBehaviour:
   volume: 0.45
   source: {fileID: 41406235}
   hurt: {fileID: 8300000, guid: b42ca35cf9f8b814e9f4d5df82e63350, type: 3}
+  player: {fileID: 21889645}
 --- !u!82 &41406235
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1152,6 +1153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1098208205183025488, guid: b0bab715207074445995f12ac0fb330e, type: 3}
+  delaytime: 0
+  SpawnRate: 2
 --- !u!114 &392168165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,7 +1185,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _loop: 1
   _executeOnStart: 0
-  _intervalLength: 10
+  _intervalLength: 8
   lerpIntervals: 1
   _targetInterval: 4
   _lerpT: 0.5
@@ -1317,6 +1320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3741676080746734033, guid: 53868a70d34792942a986c9622e84bc3, type: 3}
+  delaytime: 0
+  SpawnRate: 2
 --- !u!114 &408465611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,7 +1352,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _loop: 1
   _executeOnStart: 0
-  _intervalLength: 10
+  _intervalLength: 8
   lerpIntervals: 1
   _targetInterval: 4
   _lerpT: 0.5
@@ -1437,6 +1442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 4575848354124986500, guid: 9ae83105743519547be7341cbe843714, type: 3}
+  delaytime: 0
+  SpawnRate: 2
 --- !u!114 &417525417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,7 +1474,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _loop: 1
   _executeOnStart: 0
-  _intervalLength: 10
+  _intervalLength: 8
   lerpIntervals: 1
   _targetInterval: 4
   _lerpT: 0.5
@@ -1565,6 +1572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 4575848354124986500, guid: 9ae83105743519547be7341cbe843714, type: 3}
+  delaytime: 0
+  SpawnRate: 2
 --- !u!114 &442789655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1595,7 +1604,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _loop: 1
   _executeOnStart: 0
-  _intervalLength: 10
+  _intervalLength: 8
   lerpIntervals: 1
   _targetInterval: 4
   _lerpT: 0.5
@@ -4388,6 +4397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1098208205183025488, guid: b0bab715207074445995f12ac0fb330e, type: 3}
+  delaytime: 0
+  SpawnRate: 2
 --- !u!114 &1286627742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4418,7 +4429,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _loop: 1
   _executeOnStart: 0
-  _intervalLength: 10
+  _intervalLength: 8
   lerpIntervals: 1
   _targetInterval: 4
   _lerpT: 0.5
@@ -5252,6 +5263,46 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6965299424483986115, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5322,7 +5373,31 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6190877
       objectReference: {fileID: 0}
-
+    - target: {fileID: 6965299424365328064, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424365328079, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424365328079, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1946124761
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424365328079, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424365328067, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6965299424483986114, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -5343,74 +5418,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipX
       value: 0
-      objectReference: {fileID: 0}
-
-    - target: {fileID: 6965299424365328064, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1.3
-      objectReference: {fileID: 0}
-
-    - target: {fileID: 6965299424365328067, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: attackRate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: _slashParticle
-      value: 
-      objectReference: {fileID: 1708020288}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: _slashTransform
-      value: 
-      objectReference: {fileID: 1708020289}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: attackRate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: _slashParticle
-      value: 
-      objectReference: {fileID: 1708020288}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: _slashTransform
-      value: 
-      objectReference: {fileID: 1708020289}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-
-    - target: {fileID: 6965299424365328079, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424365328079, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1946124761
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424365328079, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6965299423844362911, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
@@ -5935,6 +5942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1098208205183025488, guid: b0bab715207074445995f12ac0fb330e, type: 3}
+  delaytime: 0
+  SpawnRate: 2
 --- !u!114 &1979538955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5965,7 +5974,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _loop: 1
   _executeOnStart: 0
-  _intervalLength: 10
+  _intervalLength: 8
   lerpIntervals: 1
   _targetInterval: 4
   _lerpT: 0.5

@@ -17,6 +17,10 @@ public class HealthBar : MonoBehaviour
     public AudioClip hurt;
     private float currentHealth, ratio;
 
+    public Caronte player;
+    public static bool gameIsOver = false;
+
+
     private void UpdateUI()
     {
         ratio = currentHealth / health;
@@ -28,6 +32,7 @@ public class HealthBar : MonoBehaviour
     {
         currentHealth = health;
         UpdateUI();
+        gameIsOver = false;
     }
 
     private void TriggerGameOver()
@@ -36,7 +41,8 @@ public class HealthBar : MonoBehaviour
         //trigger gameOver
 
         CanvasManager.instance.ShowElements(4);
-
+        player.enabled = false;
+        gameIsOver = true;
     }
 
     public void TakeDamage(float amount)
