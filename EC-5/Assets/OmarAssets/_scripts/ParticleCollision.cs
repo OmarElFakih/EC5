@@ -7,7 +7,7 @@ public class ParticleCollision : MonoBehaviour
     private int _enters = 0;
     private GameObject target;
     [SerializeField]
-    float magnitude = 3f;
+    float magnitude = 5000f;
 
     private void Start()
     {

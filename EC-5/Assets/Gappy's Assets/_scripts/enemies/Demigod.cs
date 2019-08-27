@@ -13,12 +13,15 @@ public class Demigod : Soul
 
     [Header("shoot data")]
     public GameObject projectile;
+    private GameObject secondTarget;
+    public float power = 300f;
 
     private bool canShoot = true;
 
     protected override void Start()
     {
         base.Start();
+        secondTarget = GameObject.FindGameObjectWithTag("Boat");
         delayS = delay;
         InvokeRepeating("shoot", shotdelay, firerate);
     }
@@ -62,7 +65,9 @@ public class Demigod : Soul
         if (canShoot)
         {
             GameObject obj = Instantiate(projectile, transform.position, Quaternion.identity);
-            Vector2 dir = new Vector2(target.transform.position.x - rb.position.x, target.transform.position.y - rb.position.y);
+            Vector2 dir = new Vector2(secondTarget.transform.position.x - rb.position.x, secondTarget.transform.position.y - rb.position.y);
+            obj.GetComponent<Rigidbody2D>().AddForce(dir * power);
+            Destroy(obj, 1.3f);
         }
     }
   

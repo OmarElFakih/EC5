@@ -81,8 +81,8 @@ GameObject:
   - component: {fileID: 4575848354124986507}
   - component: {fileID: 4575848354124986504}
   - component: {fileID: 4575848354124986505}
-  - component: {fileID: 4575848354124986502}
   - component: {fileID: 4575848354124986503}
+  - component: {fileID: 3259997763147150734}
   m_Layer: 11
   m_Name: Commoner
   m_TagString: Enemy
@@ -141,22 +141,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &4575848354124986502
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4575848354124986500}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.06
 --- !u!82 &4575848354124986503
 AudioSource:
   m_ObjectHideFlags: 0
@@ -253,6 +237,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!70 &3259997763147150734
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4575848354124986500}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.48, y: 3.43}
+  m_Direction: 0
 --- !u!1 &4575848355348777919
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2764344131835012068}
   - component: {fileID: 8710453328399014354}
   - component: {fileID: 3938658645114229017}
-  - component: {fileID: 892708341635188950}
+  - component: {fileID: 9164307017340631525}
   m_Layer: 11
   m_Name: demigod
   m_TagString: Enemy
@@ -50,10 +50,11 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 7198225ab701fd1448ebace46fe47fa2, type: 2}
   sr: {fileID: 6741997479115216813}
   delay: 3
-  shotdelay: 2
-  firerate: 1
+  shotdelay: 3
+  firerate: 4
   projectile: {fileID: 5339045884240962832, guid: ee16656038e4f7d4c85a07afd39ba18c,
     type: 3}
+  power: 50
 --- !u!82 &8710453328399014354
 AudioSource:
   m_ObjectHideFlags: 0
@@ -171,8 +172,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &892708341635188950
-CircleCollider2D:
+--- !u!70 &9164307017340631525
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,9 +185,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.42, y: 0.62}
-  serializedVersion: 2
-  m_Radius: 1.23
+  m_Offset: {x: -1.26, y: 0.39}
+  m_Size: {x: 2.38, y: 4.11}
+  m_Direction: 0
 --- !u!1 &3891642990058159534
 GameObject:
   m_ObjectHideFlags: 0

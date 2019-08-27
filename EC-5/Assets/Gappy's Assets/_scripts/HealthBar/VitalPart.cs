@@ -9,10 +9,13 @@ public class VitalPart : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Projectile"))
+        if (gameObject.CompareTag("Boat"))
         {
-            hb.TakeDamage(0.05f);
-            Destroy(other);
+            if (other.CompareTag("Projectile"))
+            {
+                hb.TakeDamage(0.05f);
+                Destroy(other);
+            }
         }
 
     }
