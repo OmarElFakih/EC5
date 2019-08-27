@@ -14,11 +14,13 @@ public class ScoreManager : MonoBehaviour
     [Header("User interface")]
     public Text scoreDisplay;
     public GameObject highScoredisplay;
+    public Text lastDisplay;
 
     [Header("bonus score")]
     public int bonus = 10;
     public float timeInterval = 5.5f;
     private float ini;
+
 
     private int currentScore,highScore;
     private Animator anim;
@@ -34,7 +36,8 @@ public class ScoreManager : MonoBehaviour
     private void updateUI()
     {
         //score display animation
-        scoreDisplay.text = "Score: " + currentScore;        
+        scoreDisplay.text = "Score: " + currentScore;
+        lastDisplay.text = "Final Score: " + currentScore;
 
     }
 
