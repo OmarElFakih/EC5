@@ -18,7 +18,7 @@ public class Caronte : MonoBehaviour
 
     private Animator _animator = null;
 
-    private bool _isFacingLeft = true;
+    private bool _isFacingLeft = false;
 
     private Vector3 _fp = Vector3.zero;
     private Vector3 _lp = Vector3.zero;
