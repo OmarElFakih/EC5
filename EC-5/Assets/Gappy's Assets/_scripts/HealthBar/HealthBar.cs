@@ -7,10 +7,14 @@ public class HealthBar : MonoBehaviour
 {
     [Header("UI elements")]
     public Image image;
+    public GameObject GameOverUI;
 
     [Header("Data")]
     public float health;
     public Gradient gradient;
+    public float volume = 0.45f;
+    public AudioSource source;
+    public AudioClip hurt;
     private float currentHealth, ratio;
 
     private void UpdateUI()
@@ -26,11 +30,21 @@ public class HealthBar : MonoBehaviour
         UpdateUI();
     }
 
+    private void TriggerGameOver()
+    {
+
+        //trigger gameOver
+
+    }
+
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
-        //play effects
+        //check gameOver
+        if (currentHealth <= 0) TriggerGameOver();
+
         //play other effects
+        source.PlayOneShot(hurt, volume);
     }
 
     // Start is called before the first frame update
