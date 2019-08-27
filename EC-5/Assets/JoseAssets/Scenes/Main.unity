@@ -1022,7 +1022,7 @@ GameObject:
   - component: {fileID: 392168164}
   m_Layer: 11
   m_Name: HighSpawner
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1035,7 +1035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392168162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.25, y: 8.81, z: 0}
+  m_LocalPosition: {x: 1.09, y: 8.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28042117}
@@ -1053,8 +1053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1731a2a4b5182f24f9d5a6fad9ff8a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
   Enemy: {fileID: 1098208205183025488, guid: b0bab715207074445995f12ac0fb330e, type: 3}
   SpawnRate: 4
+
+
 --- !u!1 &395586727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,8 +1154,8 @@ GameObject:
   - component: {fileID: 408465609}
   - component: {fileID: 408465610}
   m_Layer: 11
-  m_Name: HighSpawner (1)
-  m_TagString: Untagged
+  m_Name: Demigod Spawner
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1165,7 +1168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408465608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.42, y: 8.81, z: 0}
+  m_LocalPosition: {x: -25.63, y: -3.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28042117}
@@ -1183,8 +1186,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1731a2a4b5182f24f9d5a6fad9ff8a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
   Enemy: {fileID: 1098208205183025488, guid: b0bab715207074445995f12ac0fb330e, type: 3}
   SpawnRate: 4
+
+
 --- !u!1 &416245859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1243,7 @@ GameObject:
   - component: {fileID: 417525416}
   m_Layer: 11
   m_Name: DeepSpawnerLeft
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1250,7 +1256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417525414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.24, y: -0.4, z: -5.4}
+  m_LocalPosition: {x: -18.24, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28042117}
@@ -1269,7 +1275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 4575848354124986500, guid: 9ae83105743519547be7341cbe843714, type: 3}
+
   SpawnRate: 4
+
 --- !u!1 &417753690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1338,7 @@ GameObject:
   - component: {fileID: 442789654}
   m_Layer: 11
   m_Name: DeepSpawnerRight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1343,7 +1351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442789652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.26, y: -0.4, z: -5.4}
+  m_LocalPosition: {x: 17.26, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 28042117}
@@ -1362,7 +1370,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 4575848354124986500, guid: 9ae83105743519547be7341cbe843714, type: 3}
+
   SpawnRate: 4
+
 --- !u!1001 &467832023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1831,7 +1841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a212881f63058541ab666a1b1b0e785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
   hb: {fileID: 41406234}
+
 --- !u!1 &508786235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,7 +1970,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a212881f63058541ab666a1b1b0e785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
   hb: {fileID: 41406234}
+
 --- !u!50 &601329894
 Rigidbody2D:
   serializedVersion: 4
@@ -4117,8 +4131,8 @@ GameObject:
   - component: {fileID: 1286627740}
   - component: {fileID: 1286627741}
   m_Layer: 11
-  m_Name: HighSpawner (2)
-  m_TagString: Untagged
+  m_Name: Warrior Spawner(2)
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4149,8 +4163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1731a2a4b5182f24f9d5a6fad9ff8a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
   Enemy: {fileID: 3741676080746734033, guid: 53868a70d34792942a986c9622e84bc3, type: 3}
   SpawnRate: 4
+
 --- !u!1 &1319620731
 GameObject:
   m_ObjectHideFlags: 0
@@ -5010,6 +5026,48 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6190877
       objectReference: {fileID: 0}
+
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+
     - target: {fileID: 6965299424365328064, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -5545,8 +5603,8 @@ GameObject:
   - component: {fileID: 1979538953}
   - component: {fileID: 1979538954}
   m_Layer: 11
-  m_Name: HighSpawner (3)
-  m_TagString: Untagged
+  m_Name: Warrior Spawnwer (2)
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5577,8 +5635,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1731a2a4b5182f24f9d5a6fad9ff8a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
   Enemy: {fileID: 3741676080746734033, guid: 53868a70d34792942a986c9622e84bc3, type: 3}
   SpawnRate: 4
+
 --- !u!1 &2040404831
 GameObject:
   m_ObjectHideFlags: 0
