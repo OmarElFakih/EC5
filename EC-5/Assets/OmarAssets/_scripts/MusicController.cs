@@ -10,6 +10,7 @@ public class MusicController : MonoBehaviour
 
     public AudioMixerSnapshot menu;
     public AudioMixerSnapshot gameplay;
+    public AudioMixerSnapshot gameover;
     public float transitionSeconds;
 
 
@@ -62,6 +63,11 @@ public class MusicController : MonoBehaviour
     public void ToGameplay()
     {
         gameplay.TransitionTo(transitionSeconds);
+    }
+
+    public void ToGameover()
+    {
+        gameover.TransitionTo(transitionSeconds);
     }
 
 }

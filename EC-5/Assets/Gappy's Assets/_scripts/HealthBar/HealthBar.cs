@@ -41,6 +41,7 @@ public class HealthBar : MonoBehaviour
         //trigger gameOver
 
         CanvasManager.instance.ShowElements(4);
+        MusicController.instance.ToGameover();
         player.enabled = false;
         gameIsOver = true;
     }
