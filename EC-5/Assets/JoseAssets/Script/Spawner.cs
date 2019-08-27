@@ -6,14 +6,16 @@ public class Spawner : MonoBehaviour
 {
     public GameObject Enemy;
     float random_px;
-    public float delaytime;
+    private float delaytime;
     Vector3 SpawnerPosition;
     public float SpawnRate = 2f;
     float NextSpawn = 0f;
+    public float StartsIn;
+    public float nextWave;
 
     private void Start()
     {
-        delaytime = Random.Range(10, 60);
+        delaytime = Random.Range(StartsIn, nextWave);
         delay(delaytime);
     }
 
