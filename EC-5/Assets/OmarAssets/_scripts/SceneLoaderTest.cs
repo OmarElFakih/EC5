@@ -9,6 +9,7 @@ public class SceneLoaderTest : MonoBehaviour
     public void loadScene(int index)
     {
         SceneManager.LoadScene(index);
+        Time.timeScale = 1;
     }
 
     public void transition()

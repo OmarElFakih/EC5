@@ -14,7 +14,7 @@ public class Demigod : Soul
     [Header("shoot data")]
     public GameObject projectile;
     private GameObject secondTarget;
-    public float power = 300f;
+    public float power = 50f;
 
     private bool canShoot = true;
 
