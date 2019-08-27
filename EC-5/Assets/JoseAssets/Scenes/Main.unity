@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 392168164}
   m_Layer: 11
   m_Name: HighSpawner
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1147,7 +1147,7 @@ GameObject:
   - component: {fileID: 408465610}
   m_Layer: 11
   m_Name: Demigod Spawner
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 417525416}
   m_Layer: 11
   m_Name: DeepSpawnerLeft
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1325,7 +1325,7 @@ GameObject:
   - component: {fileID: 442789654}
   m_Layer: 11
   m_Name: DeepSpawnerRight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4113,7 +4113,7 @@ GameObject:
   - component: {fileID: 1286627741}
   m_Layer: 11
   m_Name: Warrior Spawner(2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5541,7 +5541,7 @@ GameObject:
   - component: {fileID: 1979538954}
   m_Layer: 11
   m_Name: Warrior Spawnwer (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
