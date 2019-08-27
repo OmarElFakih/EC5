@@ -6,7 +6,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField]
-    private bool debug;
+    private bool debug = false;
 
     [Header("Highscore key")]
     public string key = "hs";

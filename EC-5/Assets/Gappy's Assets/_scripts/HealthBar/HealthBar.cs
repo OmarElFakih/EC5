@@ -44,17 +44,23 @@ public class HealthBar : MonoBehaviour
         MusicController.instance.ToGameover();
         player.enabled = false;
         gameIsOver = true;
+        Time.timeScale = 1;
     }
 
     public void TakeDamage(float amount)
     {
+        if (gameIsOver)
+        {
+            return;
+        }
+
         currentHealth -= amount;
         //check gameOver
         if (currentHealth <= 0) TriggerGameOver();
 
         //play other effects
 
-        if(!source.isPlaying) source.PlayOneShot(hurt, volume);
+        if(!source.isPlaying && !HealthBar.gameIsOver) source.PlayOneShot(hurt, volume);
 
     }
 

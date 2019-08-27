@@ -92,7 +92,7 @@ public class Caronte : MonoBehaviour
         //mobile
 
 
-#if UNITY_STANDALONE || UNITY_WEBGL
+#if UNITY_STANDALONE || UNITY_WEBGL || UNITY_EDITOR
         //other
         if (Input.GetMouseButtonDown(0) && Time.time > _nextAttack)
         {

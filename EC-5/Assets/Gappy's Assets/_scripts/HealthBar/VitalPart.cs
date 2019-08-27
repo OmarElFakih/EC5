@@ -13,7 +13,7 @@ public class VitalPart : MonoBehaviour
         {
             if (other.CompareTag("Projectile"))
             {
-                hb.TakeDamage(0.05f);
+                hb.TakeDamage(0.20f);
                 Destroy(other);
             }
         }

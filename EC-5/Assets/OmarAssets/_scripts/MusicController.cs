@@ -11,6 +11,11 @@ public class MusicController : MonoBehaviour
     public AudioMixerSnapshot menu;
     public AudioMixerSnapshot gameplay;
     public AudioMixerSnapshot gameover;
+
+    public AudioSource a_menu;
+    public AudioSource a_gameplay;
+    public AudioSource a_gameover;
+
     public float transitionSeconds;
 
 
@@ -56,18 +61,29 @@ public class MusicController : MonoBehaviour
         /*Debug.Log("OnSceneLoaded: " + scene.name);
         Debug.Log(mode);*/
         menu.TransitionTo(transitionSeconds);
-
+        a_menu.Play();
+        //StartCoroutine(AudioStopper(a_gameover));
         Debug.Log("scene loaded");
     }
 
     public void ToGameplay()
     {
         gameplay.TransitionTo(transitionSeconds);
+        a_gameplay.Play();
+        StartCoroutine(AudioStopper(a_menu));
     }
 
     public void ToGameover()
     {
         gameover.TransitionTo(transitionSeconds);
+        a_gameover.Play();
+        StartCoroutine(AudioStopper(a_gameplay));
+    }
+
+    IEnumerator AudioStopper(AudioSource source)
+    {
+        yield return new WaitForSeconds(transitionSeconds + .5f);
+        source.Stop();
     }
 
 }
