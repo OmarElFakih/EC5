@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VitalPart : MonoBehaviour
 {
-    private HealthBar hb;
+    public HealthBar hb;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,10 +23,5 @@ public class VitalPart : MonoBehaviour
         {
             if (other.CompareTag("Enemy")) hb.TakeDamage(other.GetComponent<Soul>().data.damage);
         }
-    }
-
-    void Start()
-    {
-        hb = FindObjectOfType<HealthBar>();
     }
 }
