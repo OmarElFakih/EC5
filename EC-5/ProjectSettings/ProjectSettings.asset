@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: PawsAndTalons
-  productName: Caronte's Passage
+  productName: Charon's Passage
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.22352943, g: 0.227451, b: 0.23529413, a: 1}
@@ -166,7 +166,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.PawsAndTalons.CarontesPassage
+    Android: com.PawsAndTalons.CharonsPassage
     Standalone: com.Company.ProductName
   buildNumber: {}
   AndroidBundleVersionCode: 1
