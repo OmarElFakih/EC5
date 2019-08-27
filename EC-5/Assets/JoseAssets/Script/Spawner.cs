@@ -6,32 +6,28 @@ public class Spawner : MonoBehaviour
 {
     public GameObject Enemy;
     float random_px;
+    public float delaytime;
     Vector3 SpawnerPosition;
-   // public float SpawnRate = 2f;
-   // float NextSpawn = 0f;
+    public float SpawnRate = 2f;
+    float NextSpawn = 0f;
 
-   
+    private void Start()
+    {
+        delaytime = Random.Range(10, 60);
+        delay(delaytime);
+    }
 
+    public void delay(float delaytime)
+    {
+
+        InvokeRepeating("spawnSomething", 6, delaytime);
+    }
     // Update is called once per frame
-    void Update()
+   
+    public void spawnSomething()
     {
-       /* if(Time.time > NextSpawn)
-        {
-            NextSpawn = Time.time + SpawnRate;
-            random_px = Random.Range(-17, 17);
-            SpawnerPosition = new Vector3(random_px, transform.position.y,transform.position.z);
-            Instantiate(Enemy, SpawnerPosition, Quaternion.identity);
-        }*/
+        random_px = Random.Range(-17, 17);
+        SpawnerPosition = new Vector3(random_px, transform.position.y, transform.position.z);
+        Instantiate(Enemy, SpawnerPosition, Quaternion.identity);
     }
-
-    public void Spawn()
-    {
-        if (Random.value > .5f)
-        {
-            random_px = Random.Range(-17, 17);
-            SpawnerPosition = new Vector3(random_px, transform.position.y, transform.position.z);
-            Instantiate(Enemy, SpawnerPosition, Quaternion.identity);
-        }
-    }
-
 }
