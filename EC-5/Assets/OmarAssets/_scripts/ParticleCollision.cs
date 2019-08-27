@@ -29,7 +29,7 @@ public class ParticleCollision : MonoBehaviour
         
         Vector2 dir = new Vector2(targetRb.position.x - otherRb.position.x, targetRb.position.y - otherRb.position.y);
         dir.Normalize();
-        otherRb.AddForce(dir * magnitude, ForceMode2D.Impulse);
+        otherRb.AddForce(-dir * magnitude, ForceMode2D.Impulse);
         StartCoroutine(End(otherRb));
 
     }
