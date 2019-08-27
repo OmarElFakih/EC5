@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/OmarAssets/_Scenes/MusicTest.unity
     guid: e224b15d2e8bb894795d6d5dda52ec56
+  - enabled: 1
+    path: Assets/JoseAssets/Scenes/Main.unity
+    guid: 0d60274773a30e843abccfa59743d79d
+  - enabled: 1
+    path: Assets/JoseAssets/Scenes/GamePlay.unity
+    guid: 82f2c97565c924447a34fe943362a21c
+  - enabled: 1
+    path: Assets/JoseAssets/Scenes/Credits.unity
+    guid: 4257ca4f5aa45304dbd4012a81fca0d3
   m_configObjects: {}
