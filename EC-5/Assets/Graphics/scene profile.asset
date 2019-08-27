@@ -193,7 +193,7 @@ MonoBehaviour:
     value: 3.15
   anamorphicRatio:
     overrideState: 1
-    value: 0.07
+    value: -0.06
   color:
     overrideState: 1
     value: {r: 2.9960785, g: 2.8235295, b: 0, a: 1}
