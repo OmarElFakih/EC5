@@ -55,12 +55,6 @@ public class Demigod : Soul
             //rb.velocity = Vector2.zero;
         }
 
-        //swap sprite scale
-        dir.Normalize();
-        if (dir.x > 0) model.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        else model.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
-
-
     }
 
     void shoot()
@@ -69,9 +63,6 @@ public class Demigod : Soul
         {
             GameObject obj = Instantiate(projectile, transform.position, Quaternion.identity);
             Vector2 dir = new Vector2(target.transform.position.x - rb.position.x, target.transform.position.y - rb.position.y);
-            dir.Normalize();
-            obj.GetComponent<Rigidbody2D>().AddForce(dir * 8, ForceMode2D.Impulse);
-            Destroy(obj, 1.5f); //projectile lifetime
         }
     }
   

@@ -39,10 +39,6 @@ public class Warrior : Soul
             //rb.velocity = Vector2.zero;
         }
 
-        //swap sprite scale
-        dir.Normalize();
-        if (dir.x > 0) model.transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        else model.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
 
     }
 

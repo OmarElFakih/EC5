@@ -11,8 +11,8 @@ public abstract class Soul : MonoBehaviour
     [Header("Soul Data")]
     public SoulData data;
 
-    [Header("Target tag")]
-    public string targetTag = "Player"; //can be change to a "boat" tag 
+    [Header("model")]
+    public SpriteRenderer sr;
 
     //private
     private AudioSource audioS;
@@ -22,20 +22,16 @@ public abstract class Soul : MonoBehaviour
     //protected
     protected float currentHealth;
     protected GameObject target;
-    protected Animator anim;
     protected Rigidbody2D rb;
-    protected GameObject model;
     #endregion
 
     #region METHODS
 
     private void InitilizeData() //initialize the data outside the data holder
     {
-        
-        model = transform.GetChild(0).gameObject;
-        anim = GetComponent<Animator>();
+       
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag(targetTag);
+        target = GameObject.FindGameObjectWithTag("Player");
         currentHealth = data.health;
         audioS = GetComponent<AudioSource>();
         audioS.volume = data.effectVolume;
@@ -54,6 +50,13 @@ public abstract class Soul : MonoBehaviour
         Destroy(gameObject,data.destroyDelay);
     }
 
+    private void Flip()
+    {
+        Vector2 dir = new Vector2(target.transform.position.x - rb.position.x,target.transform.position.y - rb.position.y);
+        if (dir.x > 0) sr.flipX = false;
+        else sr.flipX = true;
+    }
+
     private void checkProximity()
     {
         proximity = Vector2.Distance(transform.position, target.transform.position);
@@ -61,7 +64,7 @@ public abstract class Soul : MonoBehaviour
 
     }
 
-    private void Move() { if (canMove) MoveTowardsTarget(target); }
+    private void Move() { if (canMove) MoveTowardsTarget(target); Flip(); }
 
     public void TakeDamage(float amount)
     {
