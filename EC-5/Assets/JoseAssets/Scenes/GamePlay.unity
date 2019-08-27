@@ -2303,7 +2303,7 @@ GameObject:
   - component: {fileID: 804830167}
   - component: {fileID: 804830166}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PauseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2385,6 +2385,17 @@ MonoBehaviour:
       - m_Target: {fileID: 615519682}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1223887259}
+        m_MethodName: stopGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2985,9 +2996,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 615519682}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1223887259}
+        m_MethodName: stopGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3500,6 +3511,7 @@ GameObject:
   - component: {fileID: 1223887256}
   - component: {fileID: 1223887255}
   - component: {fileID: 1223887258}
+  - component: {fileID: 1223887259}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3632,6 +3644,19 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1223887259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223887254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8030dce27723f054e9dd7742afd4de93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
 --- !u!1 &1400690802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4346,46 +4371,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: attackRate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: _slashParticle
-      value: 
-      objectReference: {fileID: 1708020288}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: _slashTransform
-      value: 
-      objectReference: {fileID: 1708020289}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: attackRate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: _slashParticle
-      value: 
-      objectReference: {fileID: 1708020288}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: _slashTransform
-      value: 
-      objectReference: {fileID: 1708020289}
-    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6965299424483986115, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4455,6 +4440,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.6190877
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6965299424365328064, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
