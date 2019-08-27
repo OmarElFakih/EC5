@@ -7,8 +7,7 @@ public class Pause : MonoBehaviour
 {
     
     public bool paused;
-    public Smanager manager;
-
+    
   public void stopGame()
     {
         if (!paused)
@@ -26,7 +25,7 @@ public class Pause : MonoBehaviour
     public void exitGame()
     {
         stopGame();
-        manager.ChangeScenes(1);
+        SceneManager.LoadScene(1);
     }
   
 }
