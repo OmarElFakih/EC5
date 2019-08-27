@@ -35,6 +35,8 @@ public class HealthBar : MonoBehaviour
 
         //trigger gameOver
 
+        CanvasManager.instance.ShowElements(4);
+
     }
 
     public void TakeDamage(float amount)
@@ -44,7 +46,9 @@ public class HealthBar : MonoBehaviour
         if (currentHealth <= 0) TriggerGameOver();
 
         //play other effects
-        source.PlayOneShot(hurt, volume);
+
+        if(!source.isPlaying) source.PlayOneShot(hurt, volume);
+
     }
 
     // Start is called before the first frame update

@@ -227,6 +227,11 @@ PrefabInstance:
       propertyPath: CollisionModule.quality
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5790795767884620142, guid: a377f883f23ec4f43a487d866d7939aa,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5790795767361305905, guid: a377f883f23ec4f43a487d866d7939aa,
         type: 3}
       propertyPath: m_Layer
@@ -1112,6 +1117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 392168163}
   - component: {fileID: 392168164}
+  - component: {fileID: 392168165}
   m_Layer: 11
   m_Name: HighSpawner
   m_TagString: Enemy
@@ -1145,8 +1151,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1731a2a4b5182f24f9d5a6fad9ff8a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 4575848354124986500, guid: 9ae83105743519547be7341cbe843714, type: 3}
-  SpawnRate: 1
+  Enemy: {fileID: 1098208205183025488, guid: b0bab715207074445995f12ac0fb330e, type: 3}
+--- !u!114 &392168165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392168162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218efa406a3c91e4ba72be38a5817c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTimer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 392168164}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _loop: 1
+  _executeOnStart: 0
+  _intervalLength: 10
+  lerpIntervals: 1
+  _targetInterval: 4
+  _lerpT: 0.5
+  canExecute: 1
 --- !u!1 &395586727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 408465609}
   - component: {fileID: 408465610}
+  - component: {fileID: 408465611}
   m_Layer: 11
   m_Name: Demigod Spawner
   m_TagString: Enemy
@@ -1276,7 +1317,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 3741676080746734033, guid: 53868a70d34792942a986c9622e84bc3, type: 3}
-  SpawnRate: 1
+--- !u!114 &408465611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408465608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218efa406a3c91e4ba72be38a5817c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTimer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 408465610}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _loop: 1
+  _executeOnStart: 0
+  _intervalLength: 10
+  lerpIntervals: 1
+  _targetInterval: 4
+  _lerpT: 0.5
+  canExecute: 1
 --- !u!1 &416245859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,6 +1402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417525415}
   - component: {fileID: 417525416}
+  - component: {fileID: 417525417}
   m_Layer: 11
   m_Name: DeepSpawnerLeft
   m_TagString: Enemy
@@ -1361,7 +1437,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 4575848354124986500, guid: 9ae83105743519547be7341cbe843714, type: 3}
-  SpawnRate: 2
+--- !u!114 &417525417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417525414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218efa406a3c91e4ba72be38a5817c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTimer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 417525416}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _loop: 1
+  _executeOnStart: 0
+  _intervalLength: 10
+  lerpIntervals: 1
+  _targetInterval: 4
+  _lerpT: 0.5
+  canExecute: 1
 --- !u!1 &417753690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1420,6 +1530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442789653}
   - component: {fileID: 442789654}
+  - component: {fileID: 442789655}
   m_Layer: 11
   m_Name: DeepSpawnerRight
   m_TagString: Enemy
@@ -1454,7 +1565,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 4575848354124986500, guid: 9ae83105743519547be7341cbe843714, type: 3}
-  SpawnRate: 2
+--- !u!114 &442789655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442789652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218efa406a3c91e4ba72be38a5817c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTimer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 442789654}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _loop: 1
+  _executeOnStart: 0
+  _intervalLength: 10
+  lerpIntervals: 1
+  _targetInterval: 4
+  _lerpT: 0.5
+  canExecute: 1
 --- !u!1001 &467832023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4208,6 +4353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286627740}
   - component: {fileID: 1286627741}
+  - component: {fileID: 1286627742}
   m_Layer: 11
   m_Name: Warrior Spawner(2)
   m_TagString: Enemy
@@ -4242,7 +4388,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1098208205183025488, guid: b0bab715207074445995f12ac0fb330e, type: 3}
-  SpawnRate: 2
+--- !u!114 &1286627742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286627739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218efa406a3c91e4ba72be38a5817c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTimer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1286627741}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _loop: 1
+  _executeOnStart: 0
+  _intervalLength: 10
+  lerpIntervals: 1
+  _targetInterval: 4
+  _lerpT: 0.5
+  canExecute: 1
 --- !u!1 &1319620731
 GameObject:
   m_ObjectHideFlags: 0
@@ -4992,6 +5172,86 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: attackRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashParticle
+      value: 
+      objectReference: {fileID: 1708020288}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: _slashTransform
+      value: 
+      objectReference: {fileID: 1708020289}
+    - target: {fileID: 6965299424483986116, guid: 32ca6fad355e87844ac2d7d2d4930982,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6965299424483986115, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5062,6 +5322,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6190877
       objectReference: {fileID: 0}
+
     - target: {fileID: 6965299424483986114, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -5083,11 +5344,13 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+
     - target: {fileID: 6965299424365328064, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.3
       objectReference: {fileID: 0}
+
     - target: {fileID: 6965299424365328067, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: m_Enabled
@@ -5133,6 +5396,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+
     - target: {fileID: 6965299424365328079, guid: 32ca6fad355e87844ac2d7d2d4930982,
         type: 3}
       propertyPath: m_SortingOrder
@@ -5636,6 +5900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1979538953}
   - component: {fileID: 1979538954}
+  - component: {fileID: 1979538955}
   m_Layer: 11
   m_Name: Warrior Spawnwer (2)
   m_TagString: Enemy
@@ -5670,7 +5935,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1098208205183025488, guid: b0bab715207074445995f12ac0fb330e, type: 3}
-  SpawnRate: 2
+--- !u!114 &1979538955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979538952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218efa406a3c91e4ba72be38a5817c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTimer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1979538954}
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _loop: 1
+  _executeOnStart: 0
+  _intervalLength: 10
+  lerpIntervals: 1
+  _targetInterval: 4
+  _lerpT: 0.5
+  canExecute: 1
 --- !u!1 &2040404831
 GameObject:
   m_ObjectHideFlags: 0

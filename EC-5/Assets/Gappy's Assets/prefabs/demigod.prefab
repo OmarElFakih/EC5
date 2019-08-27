@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8710453328399014354}
   - component: {fileID: 3938658645114229017}
   - component: {fileID: 892708341635188950}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: demigod
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3436691061518224983}
   - component: {fileID: 6741997479115216813}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

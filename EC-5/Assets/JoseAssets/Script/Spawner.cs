@@ -13,14 +13,14 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        delaytime = Random.Range(0, 60);
+        delaytime = Random.Range(10, 60);
         delay(delaytime);
     }
 
     public void delay(float delaytime)
     {
 
-        InvokeRepeating("spawnSomething", 5, delaytime);
+        InvokeRepeating("spawnSomething", 6, delaytime);
     }
     // Update is called once per frame
    

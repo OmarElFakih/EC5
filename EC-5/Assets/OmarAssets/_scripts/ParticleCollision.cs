@@ -36,11 +36,12 @@ public class ParticleCollision : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (other.CompareTag("Soul"))
+        if (other.CompareTag("Enemy"))
         {
             Soul enemy = other.GetComponent<Soul>();
             enemy.TakeDamage(100);
             Knockback(other);
+            Debug.Log("particle collision");
         }
         _enters += 1;
         //Debug.Log("Particle Collision " + _enters);
