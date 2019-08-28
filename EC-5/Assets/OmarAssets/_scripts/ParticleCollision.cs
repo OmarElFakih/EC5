@@ -41,7 +41,7 @@ public class ParticleCollision : MonoBehaviour
             Soul enemy = other.GetComponent<Soul>();
             enemy.TakeDamage(100);
             Knockback(other);
-            Debug.Log("particle collision");
+           // Debug.Log("particle collision");
         }
         _enters += 1;
         //Debug.Log("Particle Collision " + _enters);

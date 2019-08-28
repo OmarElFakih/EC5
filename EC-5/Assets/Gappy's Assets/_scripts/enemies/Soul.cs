@@ -18,9 +18,9 @@ public abstract class Soul : MonoBehaviour
     private AudioSource audioS;
     private bool canMove = true;
     private float proximity;
+    private float currentHealth;
 
     //protected
-    protected float currentHealth;
     protected GameObject target;
     protected Rigidbody2D rb;
     #endregion
@@ -72,8 +72,8 @@ public abstract class Soul : MonoBehaviour
         else
         {
             //play hurt animation
-            audioS.PlayOneShot(data.hurtClip);
             currentHealth -= amount;
+            audioS.PlayOneShot(data.hurtClip);
         }
     }
 
