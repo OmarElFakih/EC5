@@ -3,13 +3,26 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
 
+[SerializeField]
+public class Data
+{
+    public float health;
+    public float damage;
+    public int points;
+    public float lifeTime = 1.3f;
+    public float effectVolume = 0.45f;
+    public float stopRadius = 2f;
+    public AudioClip hurtClip;
+    public AudioClip deathClip;
+
+}
+
 public abstract class Soul : MonoBehaviour
 {
     #region ATTRIBUTES
 
-    //public 
-    [Header("Soul Data")]
-    public SoulData data;
+    [Header("data")]
+    public Data data;
 
     [Header("model")]
     public SpriteRenderer sr;
@@ -46,8 +59,8 @@ public abstract class Soul : MonoBehaviour
         canMove = false;
         GetComponent<Collider2D>().enabled = false;
         FindObjectOfType<ScoreManager>().Add(data.points);//invoke the add method on the score manager
-        audioS.PlayOneShot(data.deathScreamClip);
-        Destroy(gameObject,data.destroyDelay);
+        audioS.PlayOneShot(data.deathClip);
+        Destroy(gameObject,data.lifeTime);
     }
 
     private void Flip()
