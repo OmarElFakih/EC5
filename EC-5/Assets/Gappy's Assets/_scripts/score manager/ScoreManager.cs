@@ -78,7 +78,6 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
-
         currentScore = 0;
         highScore = InitializeHighscore();
         ini = timeInterval;

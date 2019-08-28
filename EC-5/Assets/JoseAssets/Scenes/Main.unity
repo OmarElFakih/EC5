@@ -212,6 +212,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5790795767884620141, guid: a377f883f23ec4f43a487d866d7939aa,
+        type: 3}
+      propertyPath: magnitude
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5790795767884620142, guid: a377f883f23ec4f43a487d866d7939aa,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -235,7 +240,7 @@ PrefabInstance:
     - target: {fileID: 5790795767884620142, guid: a377f883f23ec4f43a487d866d7939aa,
         type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 9
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5790795767884620142, guid: a377f883f23ec4f43a487d866d7939aa,
         type: 3}
@@ -296,6 +301,21 @@ PrefabInstance:
         type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].tangentMode
       value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790795767884620142, guid: a377f883f23ec4f43a487d866d7939aa,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790795767884620142, guid: a377f883f23ec4f43a487d866d7939aa,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790795767884620142, guid: a377f883f23ec4f43a487d866d7939aa,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5790795767361305905, guid: a377f883f23ec4f43a487d866d7939aa,
         type: 3}
@@ -1977,7 +1997,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 0.6084906, b: 0.9438102, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 0.91
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000273463feaf8af727277e008c
   m_LightCookieSprite: {fileID: 0}
@@ -1986,8 +2006,8 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.15
-  m_PointLightOuterRadius: 8.37
+  m_PointLightInnerRadius: 0.31
+  m_PointLightOuterRadius: 7.08
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
