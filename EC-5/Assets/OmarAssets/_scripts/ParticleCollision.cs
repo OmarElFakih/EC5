@@ -38,9 +38,9 @@ public class ParticleCollision : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            Knockback(other);
             Soul enemy = other.GetComponent<Soul>();
             enemy.TakeDamage(100);
-            Knockback(other);
            // Debug.Log("particle collision");
         }
         _enters += 1;

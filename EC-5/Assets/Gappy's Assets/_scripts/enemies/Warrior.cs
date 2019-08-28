@@ -28,7 +28,7 @@ public class Warrior : Soul
             
             dir.Normalize();
             rb.velocity.Normalize();
-            rb.AddForce(dir * data.speed, ForceMode2D.Impulse);
+            rb.AddForce(dir * speed, ForceMode2D.Impulse);
             StartCoroutine(EndProcess());
             delay = delayS;
 

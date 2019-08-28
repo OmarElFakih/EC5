@@ -3,26 +3,20 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
 
-[SerializeField]
-public class Data
+public abstract class Soul : MonoBehaviour
 {
+    #region ATTRIBUTES
+
+    [Header("data")]
     public float health;
     public float damage;
+    public float speed;
     public int points;
     public float lifeTime = 1.3f;
     public float effectVolume = 0.45f;
     public float stopRadius = 2f;
     public AudioClip hurtClip;
     public AudioClip deathClip;
-
-}
-
-public abstract class Soul : MonoBehaviour
-{
-    #region ATTRIBUTES
-
-    [Header("data")]
-    public Data data;
 
     [Header("model")]
     public SpriteRenderer sr;
@@ -31,7 +25,7 @@ public abstract class Soul : MonoBehaviour
     private AudioSource audioS;
     private bool canMove = true;
     private float proximity;
-    private float currentHealth;
+
 
     //protected
     protected GameObject target;
@@ -39,16 +33,6 @@ public abstract class Soul : MonoBehaviour
     #endregion
 
     #region METHODS
-
-    private void InitilizeData() //initialize the data outside the data holder
-    {
-       
-        rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player");
-        currentHealth = data.health;
-        audioS = GetComponent<AudioSource>();
-        audioS.volume = data.effectVolume;
-    }
 
     protected abstract void MoveTowardsTarget(GameObject target);
 
@@ -58,9 +42,9 @@ public abstract class Soul : MonoBehaviour
         //play sound effect
         canMove = false;
         GetComponent<Collider2D>().enabled = false;
-        FindObjectOfType<ScoreManager>().Add(data.points);//invoke the add method on the score manager
-        audioS.PlayOneShot(data.deathClip);
-        Destroy(gameObject,data.lifeTime);
+        FindObjectOfType<ScoreManager>().Add(points);//invoke the add method on the score manager
+        audioS.PlayOneShot(deathClip);
+        Destroy(gameObject,lifeTime);
     }
 
     private void Flip()
@@ -73,7 +57,7 @@ public abstract class Soul : MonoBehaviour
     private void checkProximity()
     {
         proximity = Vector2.Distance(transform.position, target.transform.position);
-        if (proximity <= data.stopRadius) canMove = false;
+        if (proximity <= stopRadius) canMove = false;
 
     }
 
@@ -81,17 +65,23 @@ public abstract class Soul : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        if (currentHealth <= 0) OnDeath();
+        if (health <= 0) OnDeath();
         else
         {
             //play hurt animation
-            currentHealth -= amount;
-            audioS.PlayOneShot(data.hurtClip);
+            health -= amount;
+            audioS.PlayOneShot(hurtClip);
         }
     }
 
     //BUILT IN METHODS
-    protected virtual void Start() => InitilizeData();
+    protected virtual void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player");
+        audioS = GetComponent<AudioSource>();
+        audioS.volume = effectVolume;
+    }
 
     // Update is called once per frame
     void FixedUpdate()

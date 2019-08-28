@@ -13,6 +13,7 @@ public class VitalPart : MonoBehaviour
         {
             if (other.CompareTag("Projectile"))
             {
+                other.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 hb.TakeDamage(0.20f);
                 Destroy(other);
             }
@@ -24,7 +25,7 @@ public class VitalPart : MonoBehaviour
     {
         if (gameObject.CompareTag("Player"))
         {
-            if (other.CompareTag("Enemy")) hb.TakeDamage(other.GetComponent<Soul>().data.damage);
+            if (other.CompareTag("Enemy")) hb.TakeDamage(other.GetComponent<Soul>().damage);
         }
     }
 }
